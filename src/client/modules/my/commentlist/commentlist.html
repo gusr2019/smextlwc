@@ -1,0 +1,18 @@
+<template>
+    <div>
+        Total comments {commentlist.length}
+
+        <div>
+            <input type="text" name="Number" value={comment.Number} oninput={handleChange}></input><br/>
+            <input type="text" name="Content" value={comment.Content} oninput={handleChange}></input><br/>
+            <input type="text" name="CreatedBy" value={comment.CreatedBy} oninput={handleChange}></input><br/>
+            <input type="text" name="CreatedDate" value={comment.CreatedDate} oninput={handleChange}></input><br/>
+            <button onclick={addComment}>Add+</button>
+        </div>
+        
+        <hr></hr>
+        <template for:each={commentlist} for:item="comment" for:index="index">
+                <my-commentItem comment={comment} index={index} key={comment.key}></my-commentItem>
+        </template>
+    </div>
+</template>

@@ -1,0 +1,27 @@
+
+> dev@0.0.0 watch E:\Development\LWC\workspace\dev
+> run-p watch:client watch:server
+
+
+> dev@0.0.0 watch:server E:\Development\LWC\workspace\dev
+> nodemon
+
+
+> dev@0.0.0 watch:client E:\Development\LWC\workspace\dev
+> lwc-services watch
+
+[33m[nodemon] 2.0.2[39m
+[33m[nodemon] to restart at any time, enter `rs`[39m
+[33m[nodemon] watching dir(s): src\server\**\*.js scripts\express-dev.js[39m
+[33m[nodemon] watching extensions: js[39m
+[32m[nodemon] starting `node ./scripts/express-dev.js`[39m
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+
+⚡⚡⚡⚡⚡  Lightning Web Components ⚡⚡⚡⚡⚡
+
+
+📦  Starting build process.
+🌎  Local server listening: http://0.0.0.0:3005
+[32m[nodemon] restarting child process[39m
+[32m[nodemon] starting `node ./scripts/express-dev.js`[39m
+Terminate batch job (Y/N)? [31m[nodemon] app crashed - waiting for file changes before starting...[39m
