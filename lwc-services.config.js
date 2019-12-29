@@ -7,9 +7,10 @@ module.exports = {
     server: {
 		port: 3006,
         customConfig: './src/server/server.js',
+		proxy: { '/': 'https://localhost:3006' },
     },
     devServer: {
 		port: 3005,
-        proxy: { '/': 'http://localhost:3005' },
+        proxy: { '/': 'https://localhost:3005' },
     }
 };
