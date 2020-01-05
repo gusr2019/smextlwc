@@ -83,6 +83,7 @@ export default class welcome extends LightningElement {
 		var dc2 = this.template.querySelector('.myModalDrop');
 		dc2.classList.remove('out');
 		dc2.classList.add('in');
+		dc2.setAttribute('style' , 'display: block;');
 	}
 
 	closeModal(){
@@ -95,5 +96,6 @@ export default class welcome extends LightningElement {
 		var dc2 = this.template.querySelector('.myModalDrop');
 		dc2.classList.add('out');
 		dc2.classList.remove('in');
+		dc2.setAttribute('style' , 'display: none;');
 	}
 }
