@@ -47,6 +47,9 @@ export default class welcome extends LightningElement {
 		else if (field === 'firstName') {
 			this.mainData.app.firstName = event.target.value;
 		}
+		else if (field === 'tradingClass-select') {
+			this.mainData.app.tradingClass = event.target.value;
+		}
 	}
 
 	saveandnext(){
