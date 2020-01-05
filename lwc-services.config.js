@@ -5,12 +5,12 @@ module.exports = {
     sourceDir: './src/client',
     moduleDir: './src/client/modules',
     server: {
-		port: 3006,
+		port: 5002,
         customConfig: './src/server/server.js',
-		proxy: { '/': 'https://localhost:3006' },
+		proxy: { '/': 'https://localhost:5002' },
     },
     devServer: {
-		port: 3005,
-        proxy: { '/': 'https://localhost:3005' },
+		port: 5001,
+        proxy: { '/': 'http://localhost:35001' },
     }
 };

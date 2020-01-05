@@ -1,7 +1,18 @@
 import { LightningElement, track, api } from 'lwc';
 
 export default class commentlist extends LightningElement {
-    comment1 = {Number:"12", Content: "4444", CreatedBy:"2222", CreatedDate:"3333"};
+    
+	renderedCallback(){
+		var dc = this.template.querySelector('.extCssId');
+		var x = document.createElement("link");
+		x.rel="stylesheet";
+		x.href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css";
+		x.crossorigin="anonymous";
+		console.log(dc);
+		dc.append(x);
+	};
+	
+	comment1 = {Number:"12", Content: "4444", CreatedBy:"2222", CreatedDate:"3333"};
     comment = {Number:"", Content: "", CreatedBy:"", CreatedDate:""};
     @track commentlist = [
         {Number:"0", Content: "A", CreatedBy:"", CreatedDate:"",key:"0"},

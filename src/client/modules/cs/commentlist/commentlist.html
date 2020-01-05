@@ -1,10 +1,12 @@
 <template>
-    <div class="row">
-		<div class="col">        
+    <div class="extCssId"></div>
+	
+	<div class="row">
+		<div class="col-md-6">        
 			<p>Total comments {commentlist.length}</p>
 		</div>
 
-        <div class="col">
+        <div class="col-md-6">
             <input type="text" name="Number" value={comment.Number} oninput={handleChange}></input><br/>
             <input type="text" name="Content" value={comment.Content} oninput={handleChange}></input><br/>
             <input type="text" name="CreatedBy" value={comment.CreatedBy} oninput={handleChange}></input><br/>
@@ -12,10 +14,12 @@
             <button onclick={addComment}>Add+</button>
         </div>
         
-		<div class="col">
+		<div class="col-md-12">
 			<hr></hr>
 			<template for:each={commentlist} for:item="comment" for:index="index">
-				<my-commentItem comment={comment} index={index} key={comment.key}></my-commentItem>
+				<div class="col-md-6" key={comment.key}>
+					<cs-commentItem comment={comment} index={index} key={comment.key}></cs-commentItem>
+				</div>
 			</template>
 		</div>
     </div>

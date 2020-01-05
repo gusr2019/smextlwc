@@ -1,0 +1,33 @@
+<template>
+    <template if:true={isShow}>
+    <div class="extCssId"></div>
+	
+	<div class="panel panel-info">
+        <div class="panel-heading">
+          <h3 class="panel-title">Financial Details</h3>
+        </div>
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="averagetransection">Average Transection</label>
+                        <input class="form-control" type="number" name="averagetransection" value={mainData.fin.averagetransection} oninput={handleChange}>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="anualturnover">Anual Turnover</label>
+                        <input class="form-control" type="number" name="anualturnover" value={mainData.fin.anualturnover} oninput={handleChange}>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <button class="btn btn-primary" type="button" onclick={savedata}>Save and Next</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    </template>
+</template>

@@ -11,7 +11,7 @@ module.exports = app => {
 	https.createServer({
 		key: privateKey,
 		cert: certificate
-	}, app).listen(3006 , () => {
+	}, app).listen(5002 , () => {
 		console.log('Yay, server started*********');
 	});
 	

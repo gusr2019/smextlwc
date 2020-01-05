@@ -1,0 +1,42 @@
+<template>
+    <template if:true={isShow}>
+    <div class="extCssId"></div>
+	
+	<div class="panel panel-info">
+        <div class="panel-heading">
+          <h3 class="panel-title">Product Details</h3>
+        </div>
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="prdName">Product</label>
+                        <input class="form-control" type="text" name="prdName" value={mainData.prd.prdName} oninput={handleChange}>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="quantity">Quantity</label>
+                        <input class="form-control" type="number" name="quantity" value={mainData.prd.prdQuantity} oninput={handleChange}>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="prdPrice">Price</label>
+                        <input class="form-control" type="number" name="prdPrice" value={mainData.prd.prdPrice} oninput={handleChange}>
+                    </div> 
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <button class="btn btn-primary" type="button" onclick={saveandgen}>Save and generate</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    </template>
+</template>
