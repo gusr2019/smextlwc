@@ -3,7 +3,7 @@ import { LightningElement, track, api } from 'lwc';
 export default class prddetail extends LightningElement {
 	
 	@track mainData;
-	isShow=false;
+	isShow = false;
 
 	renderedCallback(){
 		var dc = this.template.querySelector('.extCssId');
@@ -37,9 +37,11 @@ export default class prddetail extends LightningElement {
 		}
 	}
 
+	//public method tat can be called by parent
 	@api
-    showcomponent() {
-        this.isShow = true;
+    showcomponent(xData) {
+		this.isShow = true;
+		this.mainData = JSON.parse(JSON.stringify(xData));
 	}
 	
 	saveandgen(){

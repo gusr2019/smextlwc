@@ -49,9 +49,17 @@
         </div>
     </div>
 
-    <cs-findetail appdata={mainData} onnextstep={showProduct}></cs-findetail>
+    <div class="row">
+        <div class="col-md-12 padding-xl">
+            <cs-findetail appdata={mainData} onnextstep={showProduct}></cs-findetail>
+        </div>
+    </div>
 
-    <cs-prddetail appdata={mainData} onfinalstep={savefinal}></cs-prddetail>
+    <div class="row">
+        <div class="col-md-12 padding-xl">
+            <cs-prddetail appdata={mainData} onfinalstep={savefinal}></cs-prddetail>
+        </div>
+    </div>
 
     <template if:true={isFinalShow}>  
         <!-- Modal -->
@@ -68,11 +76,11 @@
             <div class="modal-footer">
                 <!--<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                 <button type="button" class="btn btn-primary">Save changes</button>-->
+                <button class="btn btn-primary" type="button" onclick={nextPage}>Next</button>
             </div>
             </div>
         </div>
         </div>
         <div class="modal-backdrop fade out myModalDrop"></div>
-        
     </template>
 </template>

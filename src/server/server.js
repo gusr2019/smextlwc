@@ -15,6 +15,10 @@ module.exports = app => {
 		console.log('Yay, server started*********');
 	});
 	
+	app.get('/final', (req, res) => {
+		res.render('final', { title: 'Express AAAA' });
+	});
+
 	app.get('/some/api', (req, res) => {
 		// do stuff
 		res.json({ status: 'ok' });

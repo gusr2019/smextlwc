@@ -53,15 +53,15 @@ export default class welcome extends LightningElement {
 	}
 
 	saveandnext(){
-		this.template.querySelector('cs-findetail').showcomponent();
-		
+		this.template.querySelector('cs-findetail').showcomponent(this.mainData); //call child's method from parent
+
 		var dc = this.template.querySelector('.unqPB1');
 		dc.setAttribute('style' , 'width: 33%;');
 	}
 
 	showProduct(event){
 		this.mainData = event.detail; //data recieved from child i.e. cs-findetail
-		this.template.querySelector('cs-prddetail').showcomponent();
+		this.template.querySelector('cs-prddetail').showcomponent(this.mainData);  //call child's method from parent
 
 		var dc = this.template.querySelector('.unqPB1');
 		dc.setAttribute('style' , 'width: 66%;');
@@ -100,5 +100,9 @@ export default class welcome extends LightningElement {
 		dc2.classList.add('out');
 		dc2.classList.remove('in');
 		dc2.setAttribute('style' , 'display: none;');
+	}
+
+	nextPage(){
+		window.location.href = '/final';
 	}
 }

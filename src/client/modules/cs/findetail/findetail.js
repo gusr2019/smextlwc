@@ -3,7 +3,7 @@ import { LightningElement, track, api } from 'lwc';
 export default class findetail extends LightningElement {
 	
 	@track mainData;
-	isShow=false;
+	isShow = false;
 
 	renderedCallback(){
 		var dc = this.template.querySelector('.extCssId');
@@ -23,6 +23,7 @@ export default class findetail extends LightningElement {
 		//this.mainData = {...value};
 		this.mainData = JSON.parse(JSON.stringify(value));
 	}
+
 	handleChange(event) {
 		const field = event.target.name;
 		if (field === 'averagetransection') {
@@ -40,8 +41,10 @@ export default class findetail extends LightningElement {
 		this.dispatchEvent(retEvent);
 	}
 
+	//public method tat can be called by parent
 	@api
-    showcomponent() {
-        this.isShow = true;
+    showcomponent(xData) {
+		this.isShow = true;
+		this.mainData = JSON.parse(JSON.stringify(xData));
     }
 }
